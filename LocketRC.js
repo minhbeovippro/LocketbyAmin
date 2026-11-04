@@ -238,44 +238,22 @@ if (ua.includes("Locket")) {
     // 6. WIDGET, THÔNG BÁO & GIAO DIỆN (JOURNAL / PROFILE)
     // ============================================================
     Object.assign(obj.entries, {
-        // 1. Công tắc tổng bật tính năng sự kiện khung ảnh
-        widget_frame_event: "true", 
         widget_frame_event_max_images: "10",
-        android_widget_frame_event_enabled: "true",
         widget_badge_enabled: "true",
         widget_badge_v2: "true",
         widget_stale_state_enabled: "false",
         widget_last_sent_indicator: "false",
         widget_sync_token_reload_mode: "clearTokenNever",
-        
-        // 2. Danh sách các khung ảnh để người dùng chọn trong menu
-        widget_frame_event_list: JSON.stringify([
-            {
-                uid: "frame_01",
-                url: "https://i.ibb.co/1Yt1Dzzy/Shin-chan-1.png",
-                use_local_time_zone: true,
-                placement: "overlay",
-                start_at: "2024-01-01T00:00:00",
-                end_at: "2099-12-31T23:59:59"
-            },
-            {
-                uid: "frame_02",
-                url: "https://i.ibb.co/RTm5P1n9/kitty-1.png",
-                use_local_time_zone: true,
-                placement: "overlay",
-                start_at: "2024-01-01T00:00:00",
-                end_at: "2099-12-31T23:59:59"
-            },
-            {
-                uid: "frame_03",
-                url: "https://i.ibb.co/JjLZ3cvD/khung-ins.png",
-                use_local_time_zone: true,
-                placement: "overlay",
-                start_at: "2024-01-01T00:00:00",
-                end_at: "2099-12-31T23:59:59"
-            }
-        ]),
-
+        widget_frame_event: JSON.stringify({
+            uid: "midautumn_2026",
+            // url: "https://i.ibb.co/1Yt1Dzzy/Shin-chan-1.png",
+            url: "https://i.ibb.co/RTm5P1n9/kitty-1.png",
+            // url: "https://i.ibb.co/JjLZ3cvD/khung-ins.png",
+            use_local_time_zone: true,
+            placement: "below",
+            start_at: "2024-01-01T00:00:00Z",
+            end_at: "2099-12-31T23:59:59Z"
+        }),
         live_activity_onboarding: "true",
         live_activity_onboarding_variant: "friending",
         register_live_activity_push_to_start_token: "true",
@@ -288,20 +266,22 @@ if (ua.includes("Locket")) {
         journal_activity_bar_enabled: "true",
         journal_settings: JSON.stringify({
             debug_menu_enabled: false,
-            focus_animation: true,
+            focus_animation: false,
             compact_header: true,
-            friends_button: true,
+            friends_button: false,
             reverse_scroll_direction: false,
             streak_visualization: true,
             streak_visualization_style: "gradient",
             streak_header_minimum_count: 0,
             streak_visualization_minimum_count: 2,
-            overlay_indicators: { location: true, music: true, static_content: true, weather: true }
+            overlay_indicators: { location: false, music: true, static_content: true, weather: true }
         }),
         qr_code_config: JSON.stringify({ profile_enabled: true, scanning_enabled: true }),
         custom_profile_pics: "true",
-        profile_menu_v2_enabled: "true"
+        profile_menu_v2_enabled: "true",
+        profile_badge: "true"
     });
+
     
     // ============================================================
     // 7. HỆ THỐNG, CACHE & STORAGE CDN

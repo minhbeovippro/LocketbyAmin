@@ -94,8 +94,10 @@ if (ua.includes("Locket")) {
             trim_max_duration: 60.0,
             trimMaxDuration: 60.0,
             camera_roll_max_duration: 60.0,
-            quality_mbps: 0.8,
-            qualityMbps: 0.8,
+            camera_roll_video_max_duration: 60.0,
+            longer_videos_enabled: true,
+            quality_mbps: 1.0,
+            qualityMbps: 1.0,
             flash_button: true
         }),
         live_photos: JSON.stringify({
@@ -249,28 +251,27 @@ if (ua.includes("Locket")) {
                 uid: "frame_01",
                 url: "https://i.ibb.co/1Yt1Dzzy/Shin-chan-1.png",
                 use_local_time_zone: true,
-                placement: "below",
-                start_at: "2026-11-01T00:00:00",
-                end_at: "2099-11-30T23:59:59"
+                placement: "overlay", 
+                start_at: "2024-01-01T00:00:00",
+                end_at: "2099-12-31T23:59:59"
             },
             {
                 uid: "frame_02",
                 url: "https://i.ibb.co/RTm5P1n9/kitty-1.png",
                 use_local_time_zone: true,
-                placement: "below",
-                start_at: "2026-11-01T00:00:00",
-                end_at: "2099-11-30T23:59:59"
+                placement: "overlay",
+                start_at: "2024-01-01T00:00:00",
+                end_at: "2099-12-31T23:59:59"
             },
             {
                 uid: "frame_03",
                 url: "https://i.ibb.co/JjLZ3cvD/khung-ins.png",
                 use_local_time_zone: true,
-                placement: "below",
-                start_at: "2026-11-01T00:00:00",
-                end_at: "2099-11-30T23:59:59"
+                placement: "overlay",
+                start_at: "2024-01-01T00:00:00",
+                end_at: "2099-12-31T23:59:59"
             }
         ]),
-        // ----------------------------------------
 
         live_activity_onboarding: "true",
         live_activity_onboarding_variant: "friending",
@@ -297,7 +298,7 @@ if (ua.includes("Locket")) {
         qr_code_config: JSON.stringify({ profile_enabled: true, scanning_enabled: true }),
         custom_profile_pics: "true",
         profile_menu_v2_enabled: "true"
-});
+    });
     
     // ============================================================
     // 7. HỆ THỐNG, CACHE & STORAGE CDN

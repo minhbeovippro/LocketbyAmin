@@ -238,6 +238,8 @@ if (ua.includes("Locket")) {
     // 6. WIDGET, THÔNG BÁO & GIAO DIỆN (JOURNAL / PROFILE)
     // ============================================================
     Object.assign(obj.entries, {
+        // 1. Công tắc tổng bật tính năng sự kiện khung ảnh
+        widget_frame_event: "true", 
         widget_frame_event_max_images: "10",
         android_widget_frame_event_enabled: "true",
         widget_badge_enabled: "true",
@@ -246,12 +248,13 @@ if (ua.includes("Locket")) {
         widget_last_sent_indicator: "false",
         widget_sync_token_reload_mode: "clearTokenNever",
         
-        widget_frame_event: JSON.stringify([
+        // 2. Danh sách các khung ảnh để người dùng chọn trong menu
+        widget_frame_event_list: JSON.stringify([
             {
                 uid: "frame_01",
                 url: "https://i.ibb.co/1Yt1Dzzy/Shin-chan-1.png",
                 use_local_time_zone: true,
-                placement: "overlay", 
+                placement: "overlay",
                 start_at: "2024-01-01T00:00:00",
                 end_at: "2099-12-31T23:59:59"
             },

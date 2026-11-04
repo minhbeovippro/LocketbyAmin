@@ -21,6 +21,7 @@ if (ua.includes("Locket")) {
             remove_ads: "enabled",
             video: "enabled",
             custom_widget_frames: "enabled",
+            custom_widget_frames_event: "enabled",
             streak_recovery: "enabled"
         }),
         upsell_features: JSON.stringify({
@@ -29,7 +30,8 @@ if (ua.includes("Locket")) {
             camera_theme: true,
             locket_views: true,
             remove_ads: true,
-            custom_widget_frames: true
+            custom_widget_frames: "true",
+            custom_widget_frames_event: "true"
         }),
         paywall_presentation_config: JSON.stringify({
             uid: "paywall_testflight",
@@ -238,21 +240,20 @@ if (ua.includes("Locket")) {
     // 6. WIDGET, THÔNG BÁO & GIAO DIỆN (JOURNAL / PROFILE)
     // ============================================================
     Object.assign(obj.entries, {
-        widget_frame_event_max_images: "10",
+        widget_frame_event_max_images: "5",
         widget_badge_enabled: "true",
         widget_badge_v2: "true",
         widget_stale_state_enabled: "false",
         widget_last_sent_indicator: "false",
         widget_sync_token_reload_mode: "clearTokenNever",
         widget_frame_event: JSON.stringify({
-            uid: "midautumn_2026",
-            // url: "https://i.ibb.co/1Yt1Dzzy/Shin-chan-1.png",
-            url: "https://i.ibb.co/RTm5P1n9/kitty-1.png",
-            // url: "https://i.ibb.co/JjLZ3cvD/khung-ins.png",
-            use_local_time_zone: true,
-            placement: "below",
-            start_at: "2024-01-01T00:00:00Z",
-            end_at: "2099-12-31T23:59:59Z"
+                uid: "halloween_2026",
+                // url: "https://i.ibb.co/RTm5P1n9/kitty-1.png",
+                url: "https://i.ibb.co/RTm5P1n9/kitty-1.png",
+                use_local_time_zone: true,
+                placement: "below",
+                start_at: "2024-01-01T00:00:00",
+                end_at: "2099-11-30T23:59:59"
         }),
         live_activity_onboarding: "true",
         live_activity_onboarding_variant: "friending",
@@ -266,20 +267,19 @@ if (ua.includes("Locket")) {
         journal_activity_bar_enabled: "true",
         journal_settings: JSON.stringify({
             debug_menu_enabled: false,
-            focus_animation: false,
+            focus_animation: true,
             compact_header: true,
-            friends_button: false,
+            friends_button: true,
             reverse_scroll_direction: false,
             streak_visualization: true,
             streak_visualization_style: "gradient",
             streak_header_minimum_count: 0,
             streak_visualization_minimum_count: 2,
-            overlay_indicators: { location: false, music: true, static_content: true, weather: true }
+            overlay_indicators: { location: true, music: true, static_content: true, weather: true }
         }),
         qr_code_config: JSON.stringify({ profile_enabled: true, scanning_enabled: true }),
         custom_profile_pics: "true",
-        profile_menu_v2_enabled: "true",
-        profile_badge: "true"
+        profile_menu_v2_enabled: "true"
     });
 
     

@@ -410,6 +410,19 @@ if (ua.includes("Locket")) {
                     { overlay_id: "caption:dating_time", source: "remote", caption: { background: { colors: ["#FF758C", "#FF7EB3"] }, icon: { data: "💕", type: "emoji" }, max_lines: 1, text: "Dating Time", text_color: "#FFFFFF", type: "static_content" } },
                 ]
             },
+            {
+                section: "GenZ",
+                items: [
+                    { overlay_id: "caption:genz_chan_bo_nay_di", source: "remote", caption: { background: { colors: ["#232526", "#414345"] }, icon: { data: "🙄", type: "emoji" }, max_lines: 1, text: "chan bố này đi", text_color: "#FF6B8B", type: "static_content" } },
+                    { overlay_id: "caption:genz_sao_sao_sao", source: "remote", caption: { background: { colors: ["#FF416C", "#FF4B2B"] }, icon: { data: "👁️👄👁️", type: "emoji" }, max_lines: 1, text: "sao sao sao", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:genz_ngao_a", source: "remote", caption: { background: { colors: ["#8A2387", "#E94057", "#F27121"] }, icon: { data: "🤡", type: "emoji" }, max_lines: 1, text: "ngáo à", text_color: "#FFF0F5", type: "static_content" } },
+                    { overlay_id: "caption:genz_ngan", source: "remote", caption: { background: { colors: ["#2980B9", "#2C3E50"] }, icon: { data: "🫠", type: "emoji" }, max_lines: 1, text: "ngẫn", text_color: "#A0E7E5", type: "static_content" } },
+                    { overlay_id: "caption:genz_thich_thiiii", source: "remote", caption: { background: { colors: ["#FF9A8E", "#FECFEF"] }, icon: { data: "🤏", type: "emoji" }, max_lines: 1, text: "thích thíííí", text_color: "#6D214F", type: "static_content" } },
+                    { overlay_id: "caption:genz_tuat", source: "remote", caption: { background: { colors: ["#1D976C", "#93F9B9"] }, icon: { data: "🐶", type: "emoji" }, max_lines: 1, text: "tuất", text_color: "#0B3C29", type: "static_content" } },
+                    { overlay_id: "caption:genz_ba_khi", source: "remote", caption: { background: { colors: ["#000000", "#434343"] }, icon: { data: "⚡", type: "emoji" }, max_lines: 1, text: "bá khí", text_color: "#FFE600", type: "static_content" } },
+                    { overlay_id: "caption:genz_ua_alo", source: "remote", caption: { background: { colors: ["#4E54C8", "#8F94FB"] }, icon: { data: "🧏‍♀️", type: "emoji" }, max_lines: 1, text: "ủa, alo?", text_color: "#FFFFFF", type: "static_content" } }
+                ]
+            },
             
         ])
     }); 

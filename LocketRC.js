@@ -22,7 +22,9 @@ if (ua.includes("Locket")) {
             video: "enabled",
             custom_widget_frames: "enabled",
             custom_widget_frames_event: "enabled",
-            streak_recovery: "enabled"
+            streak_recovery: "enabled",
+            camera_filter: "enabled",
+            camera_filter_sheet: "enabled"
         }),
         upsell_features: JSON.stringify({
             app_icon_picker: true,
@@ -30,8 +32,10 @@ if (ua.includes("Locket")) {
             camera_theme: true,
             locket_views: true,
             remove_ads: true,
-            custom_widget_frames: "true",
-            custom_widget_frames_event: "true"
+            custom_widget_frames: true,
+            custom_widget_frames_event: true,
+            camera_filter: true,
+            camera_filter_sheet: true
         }),
         paywall_presentation_config: JSON.stringify({
             uid: "paywall_testflight",
@@ -110,6 +114,7 @@ if (ua.includes("Locket")) {
             widget_looping_mode: "never"
         }),
         camera_filter_config: JSON.stringify({
+            camera_filter_storage_bucket: "gs://locket-public.locket.camera/filters",
             allows_custom_filters: true,
             show_filter_button: true,
             sheet_enabled: true,
@@ -131,6 +136,12 @@ if (ua.includes("Locket")) {
                 "clown", "easter_bunney_cutout", "easter_chick_cutout", "bearded", "leprechaun",
                 "lucky_face", "sweet_hearts", "elf_cutout", "santa_cutout", "frosty"
             ]
+        }),
+        capture_classification_config: JSON.stringify({
+            detection: true,                    
+            debug_caption: false,               
+            expanded_sheet_legacy_support: true,
+            display_reaction_suggestions: true
         }),
         camera_roll_preview_enabled: "true",
         camera_roll_video_enabled: "true",
@@ -247,14 +258,12 @@ if (ua.includes("Locket")) {
         widget_last_sent_indicator: "false",
         widget_sync_token_reload_mode: "clearTokenNever",
         widget_frame_event: JSON.stringify({
-                uid: "halloween_2026",
-                // url: "https://i.ibb.co/1Yt1Dzzy/Shin-chan-1.png",
-                url: "https://i.ibb.co/RTm5P1n9/kitty-1.png",
-                // url: "https://i.ibb.co/JjLZ3cvD/khung-ins.png",
-                use_local_time_zone: true,
-                placement: "below",
-                start_at: "2024-01-01T00:00:00",
-                end_at: "2099-11-30T23:59:59"
+            uid: "halloween_2026",
+            url: "https://i.ibb.co/RTm5P1n9/kitty-1.png",
+            use_local_time_zone: true,
+            placement: "below",
+            start_at: "2024-01-01T00:00:00",
+            end_at: "2099-11-30T23:59:59"
         }),
         live_activity_onboarding: "true",
         live_activity_onboarding_variant: "friending",
@@ -280,10 +289,16 @@ if (ua.includes("Locket")) {
         }),
         qr_code_config: JSON.stringify({ profile_enabled: true, scanning_enabled: true }),
         custom_profile_pics: "true",
-        profile_menu_v2_enabled: "true"
+        profile_menu_v2_enabled: "true",
+        calendar_friend_birthdays: JSON.stringify({
+             fetching: true,
+             calendar_display: true,
+             feature_popup: true,
+             settings_visibility_toggle_enabled: true,
+             fetch_ttl_seconds: 86400 
+         }),
     });
 
-    
     // ============================================================
     // 7. HỆ THỐNG, CACHE & STORAGE CDN
     // ============================================================
@@ -408,7 +423,6 @@ if (ua.includes("Locket")) {
                     { overlay_id: "caption:genz_ua_alo", source: "remote", caption: { background: { colors: ["#4E54C8", "#8F94FB"] }, icon: { data: "🧏‍♀️", type: "emoji" }, max_lines: 1, text: "ủa, alo?", text_color: "#FFFFFF", type: "static_content" } }
                 ]
             },
-            
         ])
     }); 
 }
